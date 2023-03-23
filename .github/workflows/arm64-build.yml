@@ -40,7 +40,7 @@ jobs:
             cp "./cmd/Destop-Bridge/deploy/linux/proton-bridge" "/artifacts/"
 
       - name: Archive code coverage results
-          uses: actions/upload-artifact@v3
-          with:
-            name: proton-bridge
-            path: artifacts/proton-bridge
+        uses: actions/upload-artifact@v3
+        with:
+          name: proton-bridge
+          path: artifacts/proton-bridge
