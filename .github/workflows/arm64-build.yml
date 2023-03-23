@@ -29,7 +29,7 @@ jobs:
 
           # Install some dependencies in the container.
           install: |
-            echo "deb http://deb.debian.org/debian buster-backports main contrib non-free" | tee -a /etc/apt/sources.list.d/backports.list
+            echo "deb http://deb.debian.org/debian bullseye-backports main" | tee -a /etc/apt/sources.list.d/backports.list
             apt-get update -q -y
             apt-get install -q -y git golang-1.18 gcc make sed find grep
 
