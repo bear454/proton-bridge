@@ -31,7 +31,7 @@ jobs:
           install: |
             echo "deb http://deb.debian.org/debian bullseye-backports main" | tee -a /etc/apt/sources.list.d/backports.list
             apt-get update -q -y
-            apt-get install -q -y git golang-1.18 gcc make sed find grep
+            apt-get install -q -y git golang-1.18 gcc make sed findutils grep
 
           # Produce a binary artifact and place it in the mounted volume
           run: |
