@@ -26,6 +26,7 @@ jobs:
           # Mount the artifacts directory as /artifacts in the container
           dockerRunArgs: |
             --volume "${PWD}/artifacts:/artifacts"
+            --volume "/home/runner/work/proton-bridge/proton-bridge:/proton-bridge"
 
           # Install some dependencies in the container.
           install: |
@@ -35,8 +36,7 @@ jobs:
 
           # Produce a binary artifact and place it in the mounted volume
           run: |
-            git clone git@github.com:bear454/proton-bridge.git
-            cd proton-bridge
+            cd /proton-bridge
             make build-nogui
             cp "./cmd/Destop-Bridge/deploy/linux/proton-bridge" "/artifacts/"
 
